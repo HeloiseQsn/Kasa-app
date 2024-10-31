@@ -1,3 +1,5 @@
+import './accomodation.scss'
+
 function Accomodation() {
   return (
     <div>

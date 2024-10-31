@@ -1,5 +1,8 @@
+import React from 'react'
+import './error.scss'
+
 function Error() {
-  return <h1>Error 404</h1>
+  return <div>Composant erreur</div>
 }
 
 export default Error

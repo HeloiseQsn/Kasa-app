@@ -1,3 +1,5 @@
+import './header.scss'
+
 function Header() {
   return <h1>Test header</h1>
 }
