@@ -1,0 +1,21 @@
+.carrousel-container {
+  position: relative;
+  .prevButton {
+    position: absolute;
+    top: calc(50% - 1.5rem);
+    left: 1rem;
+  }
+  .nextButton {
+    position: absolute;
+    top: calc(50% - 1.5rem);
+    right: 1rem;
+  }
+  .carrousel {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem;
+  }
+}
