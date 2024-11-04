@@ -1,5 +1,5 @@
 import React from 'react'
-import './error.scss'
+import './Error.scss'
 
 function Error() {
   return <div>Composant erreur</div>

@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 210px;
+  }
+  nav {
+    ul {
+      display: flex;
+      gap: 3rem;
+    }
+  }
+}
