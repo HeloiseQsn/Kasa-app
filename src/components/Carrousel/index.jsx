@@ -4,6 +4,7 @@ import './Carrousel.scss'
 import rightArrow from '../../assets/chevron_carousel_right.svg'
 import leftArrow from '../../assets/chevron_carousel_left.svg' // Ajoutez l'importation de l'image de la flèche gauche
 import data from '../../datas/dataaccomodation.json'
+import Error from '../../pages/error'
 
 function Carrousel() {
   const { id } = useParams() // Récupère l'ID de l'URL
@@ -17,7 +18,11 @@ function Carrousel() {
   }, [id])
 
   if (!accommodation) {
-    return <div>Chargement...</div> // Si les données ne sont pas encore chargées
+    return (
+      <div>
+        <Error />
+      </div>
+    )
   }
 
   const prevPhoto = () => {
