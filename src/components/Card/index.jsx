@@ -1,12 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Card.scss'
-import data from '../../datas/dataaccomodation.json'
 
-function Card({ id }) {
-  const cardData = data.find((card) => card.id === id)
+function Card({ cardData }) {
   return (
-    <Link to={`/accomodation/${id}`} className="card-link">
+    <Link to={`/accomodation/${cardData.id}`} className="card-link">
       <article className="card">
         <img src={cardData.cover} alt={cardData.title} />
         <div className="cardTitle">{cardData.title}</div>

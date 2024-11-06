@@ -6,8 +6,7 @@ import leftArrow from '../../assets/chevron_carousel_left.svg' // Ajoutez l'impo
 import data from '../../datas/dataaccomodation.json'
 import Error from '../../pages/error'
 
-function Carrousel() {
-  const { id } = useParams() // Récupère l'ID de l'URL
+function Carrousel({ id }) {
   const [currentIndex, setCurrentIndex] = useState(0) // currentIndex=index de l'image courante, setCurrentIndex = fonction pour mettre à jour le currentIndex et useSate initialise l'index à 0
 
   const accomodation = useMemo(() => data.find((item) => item.id === id), [id])
