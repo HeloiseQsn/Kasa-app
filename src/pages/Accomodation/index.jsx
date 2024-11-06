@@ -1,9 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import data from '../../datas/dataaccomodation.json' // Assurez-vous que ce chemin est correct
+import Carrousel from '../../components/Carrousel'
 
 function Accomodation() {
-  return <div>page accomodation</div>
+  return (
+    <div>
+      <Carrousel />
+    </div>
+  )
 }
 
 export default Accomodation
