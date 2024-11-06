@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import data from '../../datas/dataaccomodation.json'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
+import Tag from '../../components/Tag'
 
 function Accomodation() {
   const { id } = useParams() // Récupère l'ID de l'URL
@@ -20,9 +21,14 @@ function Accomodation() {
         alt={`Profil ${accomodation.host.name}`}
       />
       <Rating />
+      <div>
+        {accomodation.tags.map((tag, index) => (
+          <Tag key={index} tag={tag} />
+        ))}
+      </div>
       <Collapse
         title="Description"
-        isText="true"
+        isText={true}
         text={accomodation.description}
       />
       <Collapse
@@ -30,9 +36,6 @@ function Accomodation() {
         isText={false}
         items={accomodation.equipments}
       />
-
-      <div>Composants Tags</div>
-      <div>Composants collapse</div>
     </main>
   )
 }
