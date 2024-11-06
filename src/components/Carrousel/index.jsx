@@ -1,15 +1,11 @@
 import React, { useState, useMemo, useCallback } from 'react'
-import { useParams } from 'react-router-dom'
 import './Carrousel.scss'
 import rightArrow from '../../assets/chevron_carousel_right.svg'
-import leftArrow from '../../assets/chevron_carousel_left.svg' // Ajoutez l'importation de l'image de la flèche gauche
-import data from '../../datas/dataaccomodation.json'
+import leftArrow from '../../assets/chevron_carousel_left.svg'
 import Error from '../../pages/error'
 
-function Carrousel({ id }) {
+function Carrousel({ id, accomodation }) {
   const [currentIndex, setCurrentIndex] = useState(0) // currentIndex=index de l'image courante, setCurrentIndex = fonction pour mettre à jour le currentIndex et useSate initialise l'index à 0
-
-  const accomodation = useMemo(() => data.find((item) => item.id === id), [id])
 
   const prevPhoto = useCallback(() => {
     if (!accomodation) return
