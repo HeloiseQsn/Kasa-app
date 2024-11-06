@@ -3,6 +3,7 @@ import Carrousel from '../../components/Carrousel'
 import { useParams } from 'react-router-dom'
 import data from '../../datas/dataaccomodation.json'
 import Rating from '../../components/Rating'
+import Collapse from '../../components/Collapse'
 
 function Accomodation() {
   const { id } = useParams() // Récupère l'ID de l'URL
@@ -19,6 +20,17 @@ function Accomodation() {
         alt={`Profil ${accomodation.host.name}`}
       />
       <Rating />
+      <Collapse
+        title="Description"
+        isText="true"
+        text={accomodation.description}
+      />
+      <Collapse
+        title="Equipements"
+        isText={false}
+        items={accomodation.equipments}
+      />
+
       <div>Composants Tags</div>
       <div>Composants collapse</div>
     </main>
