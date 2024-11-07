@@ -15,18 +15,24 @@
     padding: 0 1rem;
     border: none;
     height: 3.25rem;
+    img {
+      cursor: pointer;
+    }
     span {
       @include police-s18-white-w700;
     }
   }
-  p {
-    @include police-s18-black-w400;
-    padding: 1rem;
-  }
-  ul {
-    padding: 1rem;
-    li {
+  .collapse_content {
+    background-color: #f6f6f673;
+    p {
       @include police-s18-black-w400;
+      padding: 1rem;
+    }
+    ul {
+      padding: 1rem;
+      li {
+        @include police-s18-black-w400;
+      }
     }
   }
 }

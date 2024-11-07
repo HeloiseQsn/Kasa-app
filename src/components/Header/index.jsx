@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import Logodesktop from '../../assets/logo_desktop.png'
 import Logomobile from '../../assets/logo_mobile.png'
 
-function Header() {
+function Header({ activePage }) {
   return (
     <header>
       <picture>
@@ -13,7 +13,9 @@ function Header() {
       </picture>
       <nav>
         <ul>
-          <NavLink to="/">Accueil</NavLink>
+          <NavLink className={activePage ? 'activePage' : ''} to="/">
+            Accueil
+          </NavLink>
           <NavLink to="/about">A propos</NavLink>
         </ul>
       </nav>

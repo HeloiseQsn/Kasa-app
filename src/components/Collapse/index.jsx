@@ -20,6 +20,7 @@ function Collapse({ title, text, items, isText, isFullWidth }) {
         />
       </button>
       <div
+        className="collapse_content"
         ref={contentRef}
         style={{
           maxHeight: open ? contentRef.current.scrollHeight : 0,

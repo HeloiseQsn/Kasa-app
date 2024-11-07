@@ -14,9 +14,10 @@
     }
     .cardTitle {
       position: absolute;
-      bottom: 2rem;
+      bottom: 1rem;
       left: 1rem;
-      color: white;
+      width: 70%;
+      @include police-s18-white-w700;
     }
   }
 }
