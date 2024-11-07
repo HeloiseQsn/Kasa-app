@@ -24,3 +24,9 @@
   @include police-s18-black;
   font-weight: 400;
 }
+
+@mixin police-s18-white-w700 {
+  color: white;
+  font-size: 1.12rem;
+  font-weight: 700;
+}
