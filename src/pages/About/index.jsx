@@ -1,4 +1,5 @@
 import './about.scss'
+import '../../styles/main.scss'
 import Banner from '../../components/Banner'
 import ImgBanner from '../../assets/img_banner_about_desktop.png'
 import Collapse from '../../components/Collapse'
@@ -17,10 +18,30 @@ function About() {
     <div>
       <main>
         <Banner imageSrc={ImgBanner} />
-        <Collapse title="Fiabilité" isText={true} text={textFiabilite} />
-        <Collapse title="Respect" isText={true} text={textRespect} />
-        <Collapse title="Service" isText={true} text={textService} />
-        <Collapse title="Sécurité" isText={true} text={textSecurite} />
+        <Collapse
+          title="Fiabilité"
+          isText={true}
+          isFullWidth={true}
+          text={textFiabilite}
+        />
+        <Collapse
+          title="Respect"
+          isText={true}
+          isFullWidth={true}
+          text={textRespect}
+        />
+        <Collapse
+          title="Service"
+          isText={true}
+          isFullWidth={true}
+          text={textService}
+        />
+        <Collapse
+          title="Sécurité"
+          isText={true}
+          isFullWidth={true}
+          text={textSecurite}
+        />
       </main>
     </div>
   )

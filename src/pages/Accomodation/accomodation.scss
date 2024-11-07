@@ -1,0 +1,38 @@
+@import '../../styles/mixin.scss';
+
+.title_host_rating_container {
+  display: flex;
+  justify-content: space-between;
+  .title_tag_bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title_Container {
+      padding: 2rem 0 1rem 0;
+      h1 {
+        @include title-s36-w500;
+      }
+      p {
+        @include police-s18-black;
+      }
+    }
+    .tag_Container {
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 0 0 1rem 0;
+    }
+  }
+}
+.collapse_container {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+.host_rating_bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.host_picture {
+  border-radius: 50%;
+}

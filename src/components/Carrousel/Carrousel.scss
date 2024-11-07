@@ -1,5 +1,6 @@
+@import '../../styles/mixin.scss';
+
 .carrousel {
-  margin: 3rem;
   position: relative;
 
   .carrousel__image {
@@ -9,8 +10,7 @@
 
   .carrousel__image.active {
     display: block;
-    object-fit: cover;
-    width: 100%;
+    @include objectfitcover;
     height: 415px;
   }
 

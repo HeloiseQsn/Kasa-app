@@ -1,5 +1,7 @@
+import './Tag.scss'
+
 function Tag({ tag }) {
-  return <div className="tagContainer">{tag}</div>
+  return <div className="tag">{tag}</div>
 }
 
 export default Tag

@@ -1,0 +1,23 @@
+/* Rating.css */
+.star-rating {
+  position: relative;
+  display: inline-block;
+}
+
+.stars-empty img,
+.stars-full img {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.stars-empty {
+  display: flex;
+}
+
+.stars-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+}

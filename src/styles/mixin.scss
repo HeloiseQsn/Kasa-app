@@ -1,0 +1,26 @@
+@import './variables.scss';
+
+@mixin objectfitcover {
+  object-fit: cover;
+  width: 100%;
+}
+
+@mixin title-s36-w500 {
+  color: $mainColor;
+  font-size: 2.25rem;
+}
+
+@mixin police-s18-mainColor {
+  color: $mainColor;
+  font-size: 1.12rem;
+}
+
+@mixin police-s18-black {
+  color: #000000;
+  font-size: 1.12rem;
+}
+
+@mixin police-s18-black-w400 {
+  @include police-s18-black;
+  font-weight: 400;
+}
