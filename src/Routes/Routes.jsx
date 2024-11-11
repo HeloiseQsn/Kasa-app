@@ -11,7 +11,7 @@ function RoutesKasa() {
   return (
     <React.StrictMode>
       <Router>
-        <Header activePage={true} />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/accomodation/:id" element={<Accomodation />} />

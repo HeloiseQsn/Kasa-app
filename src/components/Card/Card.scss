@@ -4,6 +4,12 @@
   flex-basis: calc(33% - 2rem);
   aspect-ratio: 1/1;
   position: relative;
+
+  @include breakpoint(small) {
+    flex-basis: 100%;
+    aspect-ratio: 355/255;
+  }
+
   article {
     width: 100%;
     height: 100%;

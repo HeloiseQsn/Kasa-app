@@ -6,12 +6,18 @@
   .carrousel__image {
     display: none;
     border-radius: 25px;
+    @include breakpoint(small) {
+      border-radius: 0;
+    }
   }
 
   .carrousel__image.active {
     display: block;
     @include objectfitcover;
     height: 415px;
+    @include breakpoint(small) {
+      height: 255px;
+    }
   }
 
   .carrousel__button {
@@ -29,6 +35,11 @@
     &--right {
       right: 0;
     }
+    img {
+      @include breakpoint(small) {
+        height: 24px;
+      }
+    }
   }
   .carroussel__numslide {
     position: absolute;
@@ -36,5 +47,8 @@
     transform: translateX(-50%);
     bottom: 1rem;
     color: white;
+    @include breakpoint(small) {
+      visibility: hidden;
+    }
   }
 }

@@ -13,9 +13,7 @@ function Header({ activePage }) {
       </picture>
       <nav>
         <ul>
-          <NavLink className={activePage ? 'activePage' : ''} to="/">
-            Accueil
-          </NavLink>
+          <NavLink to="/">Accueil</NavLink>
           <NavLink to="/about">A propos</NavLink>
         </ul>
       </nav>

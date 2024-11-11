@@ -1,5 +1,12 @@
 @import './variables.scss';
 
+@mixin breakpoint($size) {
+  @if $size == small {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
 @mixin objectfitcover {
   object-fit: cover;
   width: 100%;
@@ -35,4 +42,34 @@
   color: #000000;
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+@mixin police-s14-black-w500 {
+  color: #000000;
+  font-size: 0.87rem;
+  font-weight: 500;
+}
+
+@mixin police-s10-white-w700 {
+  color: white;
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+@mixin police-s12-mainColor-w500 {
+  color: $mainColor;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@mixin police-s13-white-w700 {
+  color: white;
+  font-size: 0.81rem;
+  font-weight: 700;
+}
+
+@mixin police-s12-black-w400 {
+  color: black;
+  font-size: 0.75rem;
+  font-weight: 400;
 }

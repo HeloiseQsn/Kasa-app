@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
 
 .tag {
   background-color: $mainColor;
@@ -10,4 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include breakpoint(small) {
+    @include police-s10-white-w700;
+  }
 }

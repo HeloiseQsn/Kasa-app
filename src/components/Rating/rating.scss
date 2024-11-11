@@ -1,4 +1,4 @@
-/* Rating.css */
+@import '../../styles/mixin.scss';
 .star-rating {
   position: relative;
   display: inline-block;
@@ -8,6 +8,10 @@
 .stars-full img {
   width: 2.25rem;
   height: 2.25rem;
+  @include breakpoint(small) {
+    width: 1.12rem;
+    height: 1.12rem;
+  }
 }
 
 .stars-empty {

@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+
+.Error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  .error404 {
+    color: $mainColor;
+    font-size: 18rem;
+    font-weight: 700;
+    @include breakpoint(small) {
+      font-size: 6rem;
+    }
+  }
+  .oups {
+    color: $mainColor;
+    font-size: 2.25rem;
+    @include breakpoint(small) {
+      @include police-s18-mainColor;
+      text-align: center;
+    }
+  }
+  a {
+    text-decoration: underline !important;
+    font-size: 1.12rem;
+    font-weight: 500;
+    padding: 1rem;
+    @include breakpoint(small) {
+      @include police-s14-black-w500;
+    }
+  }
+}

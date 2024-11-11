@@ -4,6 +4,9 @@
 .collapse {
   width: 50%;
   padding: 0.5rem 0;
+  @include breakpoint(small) {
+    width: 100%;
+  }
   button {
     background-color: $mainColor;
     border-radius: 5px;
@@ -15,11 +18,17 @@
     padding: 0 1rem;
     border: none;
     height: 3.25rem;
+    @include breakpoint(small) {
+      height: 1.87rem;
+    }
     img {
       cursor: pointer;
     }
     span {
       @include police-s18-white-w700;
+      @include breakpoint(small) {
+        @include police-s13-white-w700;
+      }
     }
   }
   .collapse_content {
@@ -27,11 +36,17 @@
     p {
       @include police-s18-black-w400;
       padding: 1rem;
+      @include breakpoint(small) {
+        @include police-s12-black-w400;
+      }
     }
     ul {
       padding: 1rem;
       li {
         @include police-s18-black-w400;
+        @include breakpoint(small) {
+          @include police-s12-black-w400;
+        }
       }
     }
   }

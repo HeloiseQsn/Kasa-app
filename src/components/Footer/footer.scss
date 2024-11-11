@@ -1,3 +1,5 @@
+@import '../../styles/mixin.scss';
+
 footer {
   background-color: black;
   color: white;
@@ -5,6 +7,9 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   padding: 1rem;
+  @include breakpoint(small) {
+    padding: 3rem;
+  }
   .LogoContainer {
     width: 100%;
     text-align: center;
@@ -15,5 +20,9 @@ footer {
   .FooterText {
     font-weight: 500;
     text-align: center;
+    @include breakpoint(small) {
+      @include police-s12-mainColor-w500;
+      color: white;
+    }
   }
 }

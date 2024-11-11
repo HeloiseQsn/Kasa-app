@@ -3,17 +3,30 @@
 .title_host_rating_container {
   display: flex;
   justify-content: space-between;
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
   .title_tag_bloc {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     .title_Container {
       padding: 2rem 0 1rem 0;
+      @include breakpoint(small) {
+        padding: 1rem 0 1rem 0;
+      }
       h1 {
         @include title-s36-w500;
+        @include breakpoint(small) {
+          @include police-s18-mainColor;
+          font-weight: 500;
+        }
       }
       p {
         @include police-s18-black;
+        @include breakpoint(small) {
+          @include police-s14-black-w500;
+        }
       }
     }
     .tag_Container {
@@ -28,11 +41,20 @@
   display: flex;
   width: 100%;
   gap: 2rem;
+  @include breakpoint(small) {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 .host_rating_bloc {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @include breakpoint(small) {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 .host_picture {
   border-radius: 50%;
