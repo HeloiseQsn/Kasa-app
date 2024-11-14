@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from '../pages/home'
-import Accomodation from '../pages/accomodation'
+import Accommodation from '../pages/accommodation'
 import About from '../pages/about'
 import Error from '../pages/error'
 import Header from '../components/Header'
@@ -14,7 +14,7 @@ function RoutesKasa() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/accomodation/:id" element={<Accomodation />} />
+          <Route path="/accommodation/:id" element={<Accommodation />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Error />} />
         </Routes>

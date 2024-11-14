@@ -5,52 +5,52 @@ import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
 import Tag from '../../components/Tag'
 import Host from '../../components/Host'
-import data from '../../datas/dataaccomodation.json'
-import './accomodation.scss'
+import data from '../../datas/dataaccommodation.json'
+import './accommodation.scss'
 import '../../styles/main.scss'
 
-function Accomodation() {
+function Accommodation() {
   const { id } = useParams() // Récupère l'ID de l'URL
   const navigate = useNavigate()
 
   // Utilisez une expression régulière pour valider l'ID
   const isValidId = /^[a-zA-Z0-9]+$/.test(id)
-  const accomodation = useMemo(
+  const accommodation = useMemo(
     () => (isValidId ? data.find((item) => item.id === id) : null),
     [id],
   )
 
   useEffect(() => {
-    if (!isValidId || !accomodation) {
+    if (!isValidId || !accommodation) {
       navigate('/error', { replace: true })
     }
-  }, [isValidId, accomodation, navigate])
+  }, [isValidId, accommodation, navigate])
 
-  if (!accomodation) {
+  if (!accommodation) {
     return null // Vous pouvez aussi afficher un spinner ou un message temporaire ici
   }
 
   return (
-    <main className="Accomodation">
-      <Carrousel id={id} accomodation={accomodation} />
+    <main className="Accommodation">
+      <Carrousel id={id} accommodation={accommodation} />
 
       <div className="title_host_rating_container">
         <div className="title_tag_bloc">
           <div className="title_Container">
-            <h1>{accomodation.title}</h1>
-            <p>{accomodation.location}</p>
+            <h1>{accommodation.title}</h1>
+            <p>{accommodation.location}</p>
           </div>
           <div className="tag_Container">
-            {accomodation.tags.map((tag, index) => (
+            {accommodation.tags.map((tag, index) => (
               <Tag key={index} tag={tag} />
             ))}
           </div>
         </div>
 
         <div className="host_rating_bloc">
-          <Host accomodation={accomodation} />
+          <Host accommodation={accommodation} />
           <div className="rating">
-            <Rating rating={accomodation.rating} />
+            <Rating rating={accommodation.rating} />
           </div>
         </div>
       </div>
@@ -60,17 +60,17 @@ function Accomodation() {
           title="Description"
           isText={true}
           isFullWidth={false}
-          text={accomodation.description}
+          text={accommodation.description}
         />
         <Collapse
           title="Equipements"
           isText={false}
           isFullWidth={false}
-          items={accomodation.equipments}
+          items={accommodation.equipments}
         />
       </div>
     </main>
   )
 }
 
-export default Accomodation
+export default Accommodation
