@@ -3,23 +3,6 @@
 .carrousel {
   position: relative;
 
-  .carrousel__image {
-    display: none;
-    border-radius: 25px;
-    @include breakpoint(small) {
-      border-radius: 0;
-    }
-  }
-
-  .carrousel__image.active {
-    display: block;
-    @include objectfitcover;
-    height: 415px;
-    @include breakpoint(small) {
-      height: 255px;
-    }
-  }
-
   .carrousel__button {
     position: absolute;
     top: 50%;
@@ -41,12 +24,30 @@
       }
     }
   }
+  .carrousel__image {
+    display: none;
+    border-radius: 25px;
+    @include breakpoint(small) {
+      border-radius: 0;
+    }
+  }
+
+  .carrousel__image.active {
+    display: block;
+    @include objectfitcover;
+    height: 415px;
+    @include breakpoint(small) {
+      height: 255px;
+    }
+  }
+
   .carroussel__numslide {
     position: absolute;
     right: 50%;
     transform: translateX(-50%);
     bottom: 1rem;
     color: white;
+    text-shadow: 1px 1px black;
     @include breakpoint(small) {
       visibility: hidden;
     }

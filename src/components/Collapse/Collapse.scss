@@ -7,6 +7,14 @@
   @include breakpoint(small) {
     width: 100%;
   }
+
+  &.fullWidth {
+    width: 90%;
+    @include breakpoint(small) {
+      width: 100%;
+    }
+  }
+
   button {
     background-color: $mainColor;
     border-radius: 5px;
@@ -21,16 +29,17 @@
     @include breakpoint(small) {
       height: 1.87rem;
     }
-    img {
-      cursor: pointer;
-    }
     span {
       @include police-s18-white-w700;
       @include breakpoint(small) {
         @include police-s13-white-w700;
       }
     }
+    img {
+      cursor: pointer;
+    }
   }
+
   .collapse_content {
     background-color: #f6f6f673;
     p {
@@ -50,8 +59,4 @@
       }
     }
   }
-}
-
-.fullWidth {
-  width: 100%;
 }

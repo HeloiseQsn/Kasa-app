@@ -1,21 +1,20 @@
+import React from 'react'
 import './Banner.scss'
 
-function Banner({ imageSrc, text }) {
-  const [firstPart, secondPart] = text ? text.split(', ') : ['', '']
+function Banner({ imageSrc, text, backgroundOpacity }) {
+  const modifiedText = text ? text.replace(/,/g, ',\n') : ''
 
   return (
-    <div className="banner">
-      <img src={imageSrc} alt="Banner" />
-      <div className="title_container">
-        {text ? (
-          <h1>
-            <span className="banner-text-first">{firstPart}, </span>
-            {secondPart && (
-              <span className="banner-text-second">{secondPart}</span>
-            )}
-          </h1>
-        ) : null}
-      </div>
+    <div className="banner" style={{ backgroundImage: `url(${imageSrc})` }}>
+      {text && (
+        <h1 className="banner__text" data-text={modifiedText}>
+          {text}
+        </h1>
+      )}
+      <div
+        className="banner__overlay"
+        style={{ backgroundColor: `rgba(0, 0, 0, ${backgroundOpacity})` }}
+      ></div>
     </div>
   )
 }

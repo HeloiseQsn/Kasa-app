@@ -33,12 +33,14 @@ function Carrousel({ id, accomodation }) {
 
   return (
     <div className="carrousel">
-      <button
-        className="carrousel__button carrousel__button--left"
-        onClick={prevPhoto}
-      >
-        <img src={leftArrow} alt="flèche précédente" />
-      </button>
+      {accomodation.pictures.length > 1 && (
+        <button
+          className="carrousel__button carrousel__button--left"
+          onClick={prevPhoto}
+        >
+          <img src={leftArrow} alt="flèche précédente" />
+        </button>
+      )}
       <div className="carrousel__images">
         {accomodation.pictures.map((image, index) => (
           <img
@@ -49,13 +51,17 @@ function Carrousel({ id, accomodation }) {
           />
         ))}
       </div>
-      <div className="carroussel__numslide">{`${currentIndex + 1}/${accomodation.pictures.length}`}</div>{' '}
-      <button
-        className="carrousel__button carrousel__button--right"
-        onClick={nextPhoto}
-      >
-        <img src={rightArrow} alt="flèche suivante" />
-      </button>
+      {accomodation.pictures.length > 1 && (
+        <div className="carroussel__numslide">{`${currentIndex + 1}/${accomodation.pictures.length}`}</div>
+      )}
+      {accomodation.pictures.length > 1 && (
+        <button
+          className="carrousel__button carrousel__button--right"
+          onClick={nextPhoto}
+        >
+          <img src={rightArrow} alt="flèche suivante" />
+        </button>
+      )}
     </div>
   )
 }

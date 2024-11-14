@@ -1,9 +1,4 @@
 @import '../../styles/mixin.scss';
-main {
-  margin: 3rem;
-  max-width: 1440px;
-
-  @include breakpoint(small) {
-    margin: 2rem;
-  }
+.home {
+  @include marginpages;
 }

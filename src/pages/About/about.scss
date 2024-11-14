@@ -1,3 +1,31 @@
-li {
-  list-style: none;
+@import '../../styles/mixin.scss';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center the Collapse components horizontally
+
+  @include marginpages;
+
+  .collapses {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .collapse {
+      margin-bottom: 1rem;
+      @include breakpoint(verysmall) {
+        margin-bottom: 0.5rem;
+      }
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+
+  .banner {
+    width: 100%;
+  }
 }

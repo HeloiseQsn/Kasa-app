@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import Logodesktop from '../../assets/logo_desktop.png'
 import Logomobile from '../../assets/logo_mobile.png'
 
-function Header({ activePage }) {
+function Header() {
   return (
     <header>
       <picture>

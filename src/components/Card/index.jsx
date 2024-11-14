@@ -7,12 +7,10 @@ function Card({ cardData }) {
     <Link to={`/accomodation/${cardData.id}`} className="card-link">
       <article className="card">
         <img src={cardData.cover} alt={cardData.title} />
-        <div className="cardTitle">{cardData.title}</div>
+        <div className="card-title">{cardData.title}</div>
       </article>
     </Link>
   )
 }
 
 export default Card
-
-//Ajouter Link sur article to page de l'accomodation

@@ -1,20 +1,37 @@
-import React, { useMemo } from 'react'
+import React, { useEffect, useMemo } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 import Carrousel from '../../components/Carrousel'
-import { useParams } from 'react-router-dom'
-import './accomodation.scss'
-import '../../styles/main.scss'
-import data from '../../datas/dataaccomodation.json'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
 import Tag from '../../components/Tag'
 import Host from '../../components/Host'
+import data from '../../datas/dataaccomodation.json'
+import './accomodation.scss'
+import '../../styles/main.scss'
 
 function Accomodation() {
   const { id } = useParams() // Récupère l'ID de l'URL
-  const accomodation = useMemo(() => data.find((item) => item.id === id), [id])
+  const navigate = useNavigate()
+
+  // Utilisez une expression régulière pour valider l'ID
+  const isValidId = /^[a-zA-Z0-9]+$/.test(id)
+  const accomodation = useMemo(
+    () => (isValidId ? data.find((item) => item.id === id) : null),
+    [id],
+  )
+
+  useEffect(() => {
+    if (!isValidId || !accomodation) {
+      navigate('/error', { replace: true })
+    }
+  }, [isValidId, accomodation, navigate])
+
+  if (!accomodation) {
+    return null // Vous pouvez aussi afficher un spinner ou un message temporaire ici
+  }
 
   return (
-    <main>
+    <main className="Accomodation">
       <Carrousel id={id} accomodation={accomodation} />
 
       <div className="title_host_rating_container">

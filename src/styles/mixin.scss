@@ -2,11 +2,29 @@
 
 @mixin breakpoint($size) {
   @if $size == small {
-    @media (max-width: 768px) {
+    @media (max-width: 830px) {
+      @content;
+    }
+  } @else if $size == verysmall {
+    @media (max-width: 445px) {
       @content;
     }
   }
 }
+
+@mixin marginpages {
+  margin: 3rem;
+  max-width: 1440px;
+
+  @include breakpoint(small) {
+    margin: 2rem;
+  }
+
+  @include breakpoint(verysmall) {
+    margin: 1.5rem;
+  }
+}
+
 @mixin objectfitcover {
   object-fit: cover;
   width: 100%;
@@ -47,7 +65,6 @@
 @mixin police-s14-black-w500 {
   color: #000000;
   font-size: 0.87rem;
-  font-weight: 500;
 }
 
 @mixin police-s10-white-w700 {

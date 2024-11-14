@@ -4,20 +4,16 @@ import ArrowOpen from '../../assets/arrow_collapse_open.svg'
 import ArrowClose from '../../assets/arrow_collapse_close.svg'
 
 function Collapse({ title, text, items, isText, isFullWidth }) {
-  const [open, setOpen] = useState(false) //useState false pour indiquer la liste est fermée par défaut
+  const [open, setOpen] = useState(false)
   const contentRef = useRef(null)
 
-  const toggleCollapse = () => setOpen((prevOpen) => !prevOpen) // pour gérer l'ouverture et la fermeture de la liste
+  const toggleCollapse = () => setOpen((prevOpen) => !prevOpen)
 
   return (
     <div className={`collapse ${isFullWidth ? 'fullWidth' : ''}`}>
-      <button>
+      <button onClick={toggleCollapse}>
         <span>{title}</span>
-        <img
-          onClick={toggleCollapse}
-          src={open ? ArrowOpen : ArrowClose}
-          alt="Toggle arrow"
-        />
+        <img src={open ? ArrowClose : ArrowOpen} alt="Toggle arrow" />
       </button>
       <div
         className="collapse_content"

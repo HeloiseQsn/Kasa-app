@@ -7,6 +7,9 @@
   align-items: center;
   gap: 3rem;
   margin-bottom: 3rem;
+
+  @include marginpages;
+
   .error404 {
     color: $mainColor;
     font-size: 18rem;
