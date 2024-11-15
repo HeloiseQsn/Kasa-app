@@ -2,37 +2,30 @@ import React, { useState, useCallback } from 'react'
 import './Carrousel.scss'
 import rightArrow from '../../assets/chevron_carousel_right.svg'
 import leftArrow from '../../assets/chevron_carousel_left.svg'
-import Error from '../../pages/error'
 
 function Carrousel({ id, accommodation }) {
-  const [currentIndex, setCurrentIndex] = useState(0) // currentIndex=index de l'image courante, setCurrentIndex = fonction pour mettre à jour le currentIndex et useSate initialise l'index à 0
+  // currentIndex = index de l'image courante, setCurrentIndex = fonction pour mettre à jour currentIndex, initialisé à 0
+  const [currentIndex, setCurrentIndex] = useState(0)
 
+  // Fonction pour aller à l'image précédente, mémorisée avec useCallback
   const prevPhoto = useCallback(() => {
-    if (!accommodation) return
-    setCurrentIndex(
-      (prevIndex) =>
-        prevIndex === 0 ? accommodation.pictures.length - 1 : prevIndex - 1, //si l'index=0, l'index suivant est le nbre total d'img -1 pour revenir à l'img préc, sinon index - 1
+    setCurrentIndex((prevIndex) =>
+      // Si l'index est 0, on revient à la dernière image, sinon on décrémente l'index
+      prevIndex === 0 ? accommodation.pictures.length - 1 : prevIndex - 1,
     )
   }, [accommodation])
 
+  // Fonction pour aller à l'image suivante, mémorisée avec useCallback
   const nextPhoto = useCallback(() => {
-    if (!accommodation) return
-    setCurrentIndex(
-      (prevIndex) =>
-        prevIndex === accommodation.pictures.length - 1 ? 0 : prevIndex + 1, //si l'index est le dernier du tableau, on revient à l'index 0, sinon index + 1
+    setCurrentIndex((prevIndex) =>
+      // Si l'index est le dernier, on revient à la première image, sinon on incrémente l'index
+      prevIndex === accommodation.pictures.length - 1 ? 0 : prevIndex + 1,
     )
   }, [accommodation])
-
-  if (!accommodation) {
-    return (
-      <div>
-        <Error />
-      </div>
-    )
-  }
 
   return (
     <div className="carrousel">
+      {/* Affichage du bouton pour aller à l'image précédente si le nombre d'images est supérieur à 1 */}
       {accommodation.pictures.length > 1 && (
         <button
           className="carrousel__button carrousel__button--left"
@@ -51,9 +44,11 @@ function Carrousel({ id, accommodation }) {
           />
         ))}
       </div>
+      {/* Affichage du numéro de l'image courante sur le total si le nombre d'images est supérieur à 1 */}
       {accommodation.pictures.length > 1 && (
-        <div className="carroussel__numslide">{`${currentIndex + 1}/${accommodation.pictures.length}`}</div>
+        <div className="carrousel__numslide">{`${currentIndex + 1}/${accommodation.pictures.length}`}</div>
       )}
+      {/* Affichage du bouton pour aller à l'image suivante si le nombre d'images est supérieur à 1 */}
       {accommodation.pictures.length > 1 && (
         <button
           className="carrousel__button carrousel__button--right"

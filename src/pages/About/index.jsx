@@ -17,7 +17,7 @@ function About() {
   return (
     <main className="about">
       <Banner imageSrc={ImgBanner} backgroundOpacity={0.3} />
-      <div className="collapses">
+      <div className="about__collapses">
         <Collapse
           title="Fiabilité"
           isText={true}

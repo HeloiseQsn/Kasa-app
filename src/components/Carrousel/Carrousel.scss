@@ -3,7 +3,7 @@
 .carrousel {
   position: relative;
 
-  .carrousel__button {
+  &__button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -18,30 +18,32 @@
     &--right {
       right: 0;
     }
+
     img {
       @include breakpoint(small) {
         height: 24px;
       }
     }
   }
-  .carrousel__image {
+
+  &__image {
     display: none;
     border-radius: 25px;
     @include breakpoint(small) {
       border-radius: 0;
     }
-  }
 
-  .carrousel__image.active {
-    display: block;
-    @include objectfitcover;
-    height: 415px;
-    @include breakpoint(small) {
-      height: 255px;
+    &.active {
+      display: block;
+      @include objectfitcover;
+      height: 415px;
+      @include breakpoint(small) {
+        height: 255px;
+      }
     }
   }
 
-  .carroussel__numslide {
+  &__numslide {
     position: absolute;
     right: 50%;
     transform: translateX(-50%);

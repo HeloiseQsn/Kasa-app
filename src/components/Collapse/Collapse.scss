@@ -4,8 +4,10 @@
 .collapse {
   width: 50%;
   padding: 0.5rem 0;
+  margin-bottom: 1rem;
   @include breakpoint(small) {
     width: 100%;
+    margin-bottom: 0.5rem;
   }
 
   &.fullWidth {
@@ -40,7 +42,7 @@
     }
   }
 
-  .collapse_content {
+  &__content {
     background-color: #f6f6f673;
     p {
       @include police-s18-black-w400;
@@ -51,8 +53,10 @@
     }
     ul {
       padding: 1rem;
+      list-style: none;
       li {
         @include police-s18-black-w400;
+        list-style: none;
         @include breakpoint(small) {
           @include police-s12-black-w400;
         }

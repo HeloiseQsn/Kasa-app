@@ -4,10 +4,10 @@ import './Card.scss'
 
 function Card({ cardData }) {
   return (
-    <Link to={`/accommodation/${cardData.id}`} className="card-link">
-      <article className="card">
+    <Link to={`/accommodation/${cardData.id}`} className="card">
+      <article className="card__article">
         <img src={cardData.cover} alt={cardData.title} />
-        <div className="card-title">{cardData.title}</div>
+        <div className="card__article--title">{cardData.title}</div>
       </article>
     </Link>
   )

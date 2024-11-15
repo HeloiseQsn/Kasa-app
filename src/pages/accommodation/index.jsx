@@ -27,35 +27,35 @@ function Accommodation() {
   }, [isValidId, accommodation, navigate])
 
   if (!accommodation) {
-    return null // Vous pouvez aussi afficher un spinner ou un message temporaire ici
+    return null
   }
 
   return (
-    <main className="Accommodation">
+    <main className="accommodation">
       <Carrousel id={id} accommodation={accommodation} />
 
-      <div className="title_host_rating_container">
-        <div className="title_tag_bloc">
-          <div className="title_Container">
+      <div className="accommodation__infoBloc">
+        <div className="accommodation__infoBloc--titleTagBloc">
+          <div className="accommodation__infoBloc--titleTagBloc--titleContainer">
             <h1>{accommodation.title}</h1>
             <p>{accommodation.location}</p>
           </div>
-          <div className="tag_Container">
+          <div className="accommodation__infoBloc--titleTagBloc--tagContainer">
             {accommodation.tags.map((tag, index) => (
               <Tag key={index} tag={tag} />
             ))}
           </div>
         </div>
 
-        <div className="host_rating_bloc">
+        <div className="accommodation__infoBloc--hostRatingBloc">
           <Host accommodation={accommodation} />
-          <div className="rating">
+          <div>
             <Rating rating={accommodation.rating} />
           </div>
         </div>
       </div>
 
-      <div className="collapse_container">
+      <div className="accommodation__collapseBloc">
         <Collapse
           title="Description"
           isText={true}

@@ -2,15 +2,11 @@ import React from 'react'
 import './Banner.scss'
 
 function Banner({ imageSrc, text, backgroundOpacity }) {
-  const modifiedText = text ? text.replace(/,/g, ',\n') : ''
-
   return (
     <div className="banner" style={{ backgroundImage: `url(${imageSrc})` }}>
-      {text && (
-        <h1 className="banner__text" data-text={modifiedText}>
-          {text}
-        </h1>
-      )}
+      {/*Insertion text uniquement s'il est défini*/}
+      {text && <h1 className="banner__text">{text}</h1>}
+      {/*overlay pour appliquer le filtre noir d'opacité variable sur la banner - gestion de l'opacité via la props backgroundOpacity*/}
       <div
         className="banner__overlay"
         style={{ backgroundColor: `rgba(0, 0, 0, ${backgroundOpacity})` }}

@@ -6,7 +6,7 @@ import ImgBanner from '../../assets/img_banner_home_desktop.png'
 
 function Home() {
   return (
-    <main class="home">
+    <main className="home">
       <Banner
         imageSrc={ImgBanner}
         text="Chez vous, partout et ailleurs"

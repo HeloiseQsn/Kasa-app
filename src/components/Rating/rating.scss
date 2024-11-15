@@ -1,27 +1,27 @@
 @import '../../styles/mixin.scss';
-.star-rating {
+.rating {
   position: relative;
   display: inline-block;
-}
 
-.stars-empty img,
-.stars-full img {
-  width: 2.25rem;
-  height: 2.25rem;
-  @include breakpoint(small) {
-    width: 1.12rem;
-    height: 1.12rem;
+  &__emptyStars img,
+  &__fullStars img {
+    width: 2.25rem;
+    height: 2.25rem;
+    @include breakpoint(small) {
+      width: 1.12rem;
+      height: 1.12rem;
+    }
   }
-}
 
-.stars-empty {
-  display: flex;
-}
+  &__emptyStars {
+    display: flex;
+  }
 
-.stars-full {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  display: flex;
+  &__fullStars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+  }
 }

@@ -23,7 +23,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur plusieurs lignes si nécessaire */
+    flex-wrap: wrap;
     width: 100%;
 
     ul {
@@ -32,11 +32,11 @@ header {
       padding: 0;
 
       @include breakpoint(small) {
-        gap: 1.5rem; /* Réduit l'écart sur petit écran */
+        gap: 1.5rem;
       }
 
       @include breakpoint(verysmall) {
-        gap: 1rem; /* Réduit encore plus l'écart pour les très petits écrans */
+        gap: 1rem;
       }
 
       a {

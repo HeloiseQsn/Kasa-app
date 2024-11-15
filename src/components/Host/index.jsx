@@ -1,19 +1,18 @@
 import './Host.scss'
 
-function Host({ accomodation }) {
-  const [firstName, lastName] = accomodation.host.name.split(' ')
+function Host({ accommodation }) {
+  const [firstName, lastName] = accommodation.host.name.split(' ')
 
   return (
-    <div className="host_container">
+    <div className="host__container">
       <p>
         <span>{firstName}</span>
         <br />
         <span>{lastName}</span>
       </p>
       <img
-        className="host_picture"
-        src={accomodation.host.picture}
-        alt={`Profil ${accomodation.host.name}`}
+        src={accommodation.host.picture}
+        alt={`Profil ${accommodation.host.name}`}
       />
     </div>
   )

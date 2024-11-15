@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixin.scss';
 
-.Error {
+.error {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@
 
   @include marginpages;
 
-  .error404 {
+  &__num {
     color: $mainColor;
     font-size: 18rem;
     font-weight: 700;
@@ -18,7 +18,8 @@
       font-size: 6rem;
     }
   }
-  .oups {
+
+  &__text {
     color: $mainColor;
     font-size: 2.25rem;
     @include breakpoint(small) {
@@ -26,7 +27,8 @@
       text-align: center;
     }
   }
-  a {
+
+  &__homeLink {
     text-decoration: underline !important;
     font-size: 1.12rem;
     font-weight: 500;
