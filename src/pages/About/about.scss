@@ -2,8 +2,7 @@
 @import '../../styles/variables.scss';
 
 .about {
-  @include flexColumn;
-  align-items: center;
+  @include flexColumnAlignCenter;
 
   @include marginpages;
 
@@ -13,7 +12,6 @@
 
   &__collapses {
     width: 100%;
-    @include flexColumn;
-    align-items: center;
+    @include flexColumnAlignCenter;
   }
 }

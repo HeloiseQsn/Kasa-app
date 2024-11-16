@@ -16,9 +16,14 @@ function Collapse({ title, text, items, isText, isFullWidth }) {
     // class conditionnelle fullWidth en fonction de la props pour gestion de la largeur du collapse
     <div className={`collapse ${isFullWidth ? 'fullWidth' : ''}`}>
       {/* Bouton pour gérer l'affichage ou non du contenu */}
-      <button onClick={toggleCollapse}>
+      <button>
         <span>{title}</span>
-        <img src={open ? ArrowClose : ArrowOpen} alt="Toggle arrow" />
+        <img
+          onClick={toggleCollapse}
+          src={open ? ArrowClose : ArrowOpen}
+          alt="Toggle arrow"
+          className={`collapse__arrow ${open ? 'open' : ''}`}
+        />
       </button>
       {/* Contenu du collapse avec animation de hauteur */}
       <div
@@ -45,5 +50,4 @@ function Collapse({ title, text, items, isText, isFullWidth }) {
     </div>
   )
 }
-
 export default Collapse

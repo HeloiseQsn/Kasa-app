@@ -6,7 +6,7 @@ import Collapse from '../../components/Collapse'
 import Tag from '../../components/Tag'
 import Host from '../../components/Host'
 import data from '../../datas/dataaccommodation.json'
-import './accommodation.scss'
+import './Accommodation.scss'
 import '../../styles/main.scss'
 
 function Accommodation() {

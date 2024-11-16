@@ -2,9 +2,8 @@
 @import '../../styles/variables.scss';
 
 .host__container {
-  display: flex;
+  @include flexRowAlignCenter;
   justify-content: flex-end;
-  align-items: center;
   gap: 1rem;
   text-align: right;
   padding: 1rem 0 1rem 0;

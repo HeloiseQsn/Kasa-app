@@ -34,3 +34,14 @@
   display: flex;
   flex-direction: column;
 }
+
+@mixin flexColumnAlignCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexRowAlignCenter {
+  display: flex;
+  align-items: center;
+}

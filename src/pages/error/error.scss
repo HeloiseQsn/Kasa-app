@@ -2,8 +2,7 @@
 @import '../../styles/mixin.scss';
 
 .error {
-  @include flexColumn;
-  align-items: center;
+  @include flexColumnAlignCenter;
   gap: 3rem;
   margin-bottom: 3rem;
 

@@ -1,4 +1,4 @@
-import './about.scss'
+import './About.scss'
 import '../../styles/main.scss'
 import Banner from '../../components/Banner'
 import ImgBanner from '../../assets/img_banner_about_desktop.png'

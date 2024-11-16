@@ -8,9 +8,8 @@
   flex: 0.3;
   height: 1.6rem;
   font-size: $fontSize_tagTitle;
-  display: flex;
+  @include flexRowAlignCenter;
   justify-content: center;
-  align-items: center;
   @include breakpoint(small) {
     font-size: $fontSize_tagTitleMobile;
   }

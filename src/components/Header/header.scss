@@ -21,8 +21,7 @@ header {
   }
 
   nav {
-    display: flex;
-    align-items: center;
+    @include flexRowAlignCenter;
     justify-content: flex-end;
     flex-wrap: wrap;
     width: 100%;
