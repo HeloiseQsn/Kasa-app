@@ -2,8 +2,7 @@
 @import '../../styles/mixin.scss';
 
 .error {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   align-items: center;
   gap: 3rem;
   margin-bottom: 3rem;
@@ -12,29 +11,28 @@
 
   &__num {
     color: $mainColor;
-    font-size: 18rem;
-    font-weight: 700;
+    font-size: $fontSize_numError;
+    font-weight: $fontWeight_strong;
     @include breakpoint(small) {
-      font-size: 6rem;
+      font-size: $fontSize_numErrorMobile;
     }
   }
 
   &__text {
-    color: $mainColor;
-    font-size: 2.25rem;
+    color: $textColor_errorText;
+    font-size: $fontSize_errorText;
     @include breakpoint(small) {
-      @include police-s18-mainColor;
+      font-size: $fontSize_errorTextMobile;
       text-align: center;
     }
   }
 
   &__homeLink {
     text-decoration: underline !important;
-    font-size: 1.12rem;
-    font-weight: 500;
+    font-size: $fontSize_homeLink;
     padding: 1rem;
     @include breakpoint(small) {
-      @include police-s14-black-w500;
+      font-size: $fontSize_homeLinkMobile;
     }
   }
 }

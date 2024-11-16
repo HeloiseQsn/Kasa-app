@@ -19,8 +19,8 @@
 
   button {
     background-color: $mainColor;
-    border-radius: 5px;
-    color: white;
+    border-radius: $borderRadius_small;
+    color: $textColor_collapseButton;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -32,9 +32,12 @@
       height: 1.87rem;
     }
     span {
-      @include police-s18-white-w700;
+      color: $textColor_collapseTitle;
+      font-size: $fontSize_collapseTitle;
+      font-weight: $fontWeight_strong;
+
       @include breakpoint(small) {
-        @include police-s13-white-w700;
+        font-size: $fontSize_collapseTitle;
       }
     }
     img {
@@ -45,20 +48,22 @@
   &__content {
     background-color: #f6f6f673;
     p {
-      @include police-s18-black-w400;
+      font-size: $fontSize_collapseContent;
+      font-weight: $fontWeight_fine;
       padding: 1rem;
       @include breakpoint(small) {
-        @include police-s12-black-w400;
+        font-size: $fontSize_collapseContentMobile;
       }
     }
     ul {
       padding: 1rem;
       list-style: none;
       li {
-        @include police-s18-black-w400;
+        font-size: $fontSize_collapseContent;
+        font-weight: $fontWeight_fine;
         list-style: none;
         @include breakpoint(small) {
-          @include police-s12-black-w400;
+          font-size: $fontSize_collapseContentMobile;
         }
       }
     }

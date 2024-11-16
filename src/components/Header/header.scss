@@ -1,4 +1,5 @@
 @import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
 
 header {
   display: flex;
@@ -40,11 +41,10 @@ header {
       }
 
       a {
-        @include police-s24-black-w500;
-
+        font-size: $fontSize_headerNav;
         @include breakpoint(small) {
           text-transform: uppercase;
-          font-size: 0.75rem;
+          font-size: $fontSize_headerNavMobile;
         }
       }
     }

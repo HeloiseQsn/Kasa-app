@@ -1,7 +1,10 @@
+@import '../styles/mixin.scss';
+@import '../styles/variables.scss';
+
 * {
   max-width: 1440px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: $fontWeight_default;
 }
 html {
   margin: 0 auto;

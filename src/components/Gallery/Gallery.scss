@@ -1,8 +1,9 @@
 @import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
 
 .gallery {
-  background-color: #f6f6f6;
-  border-radius: 25px;
+  background-color: $secondColor;
+  border-radius: $borderRadius_large;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -10,9 +11,8 @@
   padding: 3rem;
 
   @include breakpoint(small) {
-    background-color: white;
     padding: 0;
-    border-radius: 10px;
+    border-radius: $borderRadius_medium;
     gap: 2rem;
   }
 }

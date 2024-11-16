@@ -1,11 +1,12 @@
 @import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
 
 .banner {
   position: relative;
   background-size: cover;
   background-position: center;
   height: 223px;
-  border-radius: 25px;
+  border-radius: $borderRadius_large;
   margin-bottom: 3rem;
 
   @include breakpoint(small) {
@@ -16,15 +17,15 @@
   &__text {
     position: relative;
     z-index: 1;
-    color: white;
+    color: $textColor_textBanner;
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2.9rem;
+    font-size: $fontSize_bannerText;
+    font-weight: $fontWeight_strong;
 
     @include breakpoint(small) {
-      font-size: 1.5rem;
-      font-weight: 700;
+      font-size: $fontSize_bannerTextMobile;
     }
   }
 
@@ -34,6 +35,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 25px;
+    border-radius: $borderRadius_large;
   }
 }

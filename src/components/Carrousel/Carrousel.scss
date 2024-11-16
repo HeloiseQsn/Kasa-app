@@ -1,4 +1,5 @@
 @import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
 
 .carrousel {
   position: relative;
@@ -28,9 +29,9 @@
 
   &__image {
     display: none;
-    border-radius: 25px;
+    border-radius: $borderRadius_large;
     @include breakpoint(small) {
-      border-radius: 0;
+      border-radius: $borderRadius_noBR;
     }
 
     &.active {
@@ -48,7 +49,7 @@
     right: 50%;
     transform: translateX(-50%);
     bottom: 1rem;
-    color: white;
+    color: $textColor_numSlideCarrousel;
     text-shadow: 1px 1px black;
     @include breakpoint(small) {
       visibility: hidden;

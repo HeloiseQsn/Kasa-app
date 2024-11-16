@@ -1,1 +1,61 @@
 $mainColor: #ff6060;
+$secondColor: #f6f6f6;
+
+$fontSize288px: 18rem;
+$fontSize96px: 6rem;
+$fontSize48px: 2.9rem;
+$fontSize36px: 2.25rem;
+$fontSize18px: 1.12rem;
+$fontSize24px: 1.5rem;
+$fontSize14px: 0.87rem;
+$fontSize13px: 0.81rem;
+$fontSize12px: 0.75rem;
+$fontSize10px: 0.62rem;
+
+$fontWeight_default: 500;
+$fontWeight_fine: 400;
+$fontWeight_strong: 700;
+
+$borderRadius_large: 25px;
+$borderRadius_medium: 10px;
+$borderRadius_small: 5px;
+$borderRadius_hostPicure: 50%;
+$borderRadius_noBR: 0;
+
+//Text colors
+$textColor_cardTitle: $secondColor;
+$textColor_collapseTitle: $secondColor;
+$textColor_tagTitle: $secondColor;
+$textColor_textBanner: $secondColor;
+$textColor_numSlideCarrousel: $secondColor;
+$textColor_collapseButton: $secondColor;
+$textColor_footerText: $secondColor;
+$textColor_hostName: $mainColor;
+$textColor_accomodationTitle: $mainColor;
+$textColor_errorText: $mainColor;
+
+//font-size
+$fontSize_bannerText: $fontSize48px;
+$fontSize_bannerTextMobile: $fontSize24px;
+$fontSize_accommodationTitle: $fontSize36px;
+$fontSize_accommodationTitleMobile: $fontSize18px;
+$fontSize_cardTitle: $fontSize18px;
+$fontSize_accommodationSubtitle: $fontSize18px;
+$fontSize_accommodationSubtitleMobile: $fontSize14px;
+$fontSize_collapseTitle: $fontSize18px;
+$fontSize_collapseTitleMobile: $fontSize13px;
+$fontSize_collapseContent: $fontSize18px;
+$fontSize_collapseContentMobile: $fontSize12px;
+$fontSize_hostName: $fontSize18px;
+$fontSize_hostNameMobile: $fontSize12px;
+$fontSize_errorText: $fontSize36px;
+$fontSize_errorTextMobile: $fontSize18px;
+$fontSize_footerText: $fontSize12px;
+$fontSize_tagTitle: $fontSize14px;
+$fontSize_tagTitleMobile: $fontSize12px;
+$fontSize_headerNav: $fontSize24px;
+$fontSize_headerNavMobile: $fontSize12px;
+$fontSize_numError: $fontSize288px;
+$fontSize_numErrorMobile: $fontSize96px;
+$fontSize_homeLink: $fontSize24px;
+$fontSize_homeLinkMobile: $fontSize14px;

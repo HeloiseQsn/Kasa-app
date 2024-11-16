@@ -1,4 +1,5 @@
 @import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
 
 .accommodation {
   @include marginpages;
@@ -7,12 +8,11 @@
     display: flex;
     justify-content: space-between;
     @include breakpoint(small) {
-      flex-direction: column;
+      @include flexColumn;
     }
 
     &--titleTagBloc {
-      display: flex;
-      flex-direction: column;
+      @include flexColumn;
       justify-content: space-between;
 
       &--titleContainer {
@@ -22,17 +22,17 @@
         }
 
         h1 {
-          @include title-s36-w500;
+          color: $textColor_accomodationTitle;
+          font-size: $fontSize_accommodationTitle;
           @include breakpoint(small) {
-            @include police-s18-mainColor;
-            font-weight: 500;
+            font-size: $fontSize_accommodationTitleMobile;
           }
         }
 
         p {
-          @include police-s18-black;
+          font-size: $fontSize_accommodationSubtitle;
           @include breakpoint(small) {
-            @include police-s14-black-w500;
+            font-size: $fontSize_accommodationSubtitleMobile;
           }
         }
       }
@@ -46,8 +46,7 @@
     }
 
     &--hostRatingBloc {
-      display: flex;
-      flex-direction: column;
+      @include flexColumn;
       align-items: flex-end;
       justify-content: center;
 
@@ -64,7 +63,7 @@
     width: 100%;
     gap: 2rem;
     @include breakpoint(small) {
-      flex-direction: column;
+      @include flexColumn;
       gap: 0;
     }
   }

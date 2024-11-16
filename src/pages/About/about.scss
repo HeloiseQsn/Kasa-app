@@ -1,8 +1,8 @@
 @import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
 
 .about {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   align-items: center;
 
   @include marginpages;
@@ -13,8 +13,7 @@
 
   &__collapses {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     align-items: center;
   }
 }
