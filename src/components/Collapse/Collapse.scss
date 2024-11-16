@@ -21,10 +21,9 @@
     background-color: $mainColor;
     border-radius: $borderRadius_small;
     color: $textColor_collapseButton;
-    display: flex;
+    @include flexRowAlignCenter;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
     padding: 0 1rem;
     border: none;
     height: 3.25rem;
