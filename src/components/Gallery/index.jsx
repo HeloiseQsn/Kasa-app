@@ -1,6 +1,6 @@
 import React from 'react'
-import './Gallery.scss'
-import Card from '../Card'
+import './gallery.scss'
+import Card from '../card'
 import data from '../../datas/dataaccommodation.json'
 
 function Gallery() {

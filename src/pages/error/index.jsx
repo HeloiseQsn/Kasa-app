@@ -1,4 +1,4 @@
-import './Error.scss'
+import './error.scss'
 import '../../styles/main.scss'
 import { NavLink } from 'react-router-dom'
 

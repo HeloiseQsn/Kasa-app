@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import './Carrousel.scss'
+import './carrousel.scss'
 import rightArrow from '../../assets/chevron_carousel_right.svg'
 import leftArrow from '../../assets/chevron_carousel_left.svg'
 

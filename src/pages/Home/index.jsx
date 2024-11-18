@@ -1,8 +1,8 @@
-import './Home.scss'
+import './home.scss'
 import '../../styles/main.scss'
-import Gallery from '../../components/Gallery'
-import Banner from '../../components/Banner'
-import ImgBanner from '../../assets/img_banner_home_desktop.png'
+import Gallery from '../../components/gallery'
+import Banner from '../../components/banner'
+import ImgBanner from '../../assets/img_banner_home_desktop.webp'
 
 function Home() {
   return (

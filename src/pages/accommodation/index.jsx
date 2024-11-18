@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import Carrousel from '../../components/Carrousel'
-import Rating from '../../components/Rating'
-import Collapse from '../../components/Collapse'
-import Tag from '../../components/Tag'
-import Host from '../../components/Host'
+import Carrousel from '../../components/carrousel'
+import Rating from '../../components/rating'
+import Collapse from '../../components/collapse'
+import Tag from '../../components/tag'
+import Host from '../../components/host'
 import data from '../../datas/dataaccommodation.json'
-import './Accommodation.scss'
+import './accommodation.scss'
 import '../../styles/main.scss'
 
 function Accommodation() {

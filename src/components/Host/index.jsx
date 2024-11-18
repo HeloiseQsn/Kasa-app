@@ -1,4 +1,4 @@
-import './Host.scss'
+import './host.scss'
 
 function Host({ accommodation }) {
   const [firstName, lastName] = accommodation.host.name.split(' ')

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Banner.scss'
+import './banner.scss'
 
 function Banner({ imageSrc, text, backgroundOpacity }) {
   return (
