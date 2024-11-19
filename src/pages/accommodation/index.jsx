@@ -17,7 +17,7 @@ function Accommodation() {
   const isValidId = /^[a-zA-Z0-9]+$/.test(id)
   const accommodation = useMemo(
     () => (isValidId ? data.find((item) => item.id === id) : null),
-    [id],
+    [id, isValidId],
   )
 
   useEffect(() => {
