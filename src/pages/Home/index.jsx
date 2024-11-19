@@ -3,13 +3,19 @@ import '../../styles/main.scss'
 import Gallery from '../../components/gallery'
 import Banner from '../../components/banner'
 import ImgBanner from '../../assets/img_banner_home_desktop.webp'
+import ImgBannerMobile from '../../assets/img_banner_home_mobile.webp'
 
 function Home() {
+  const text = 'Chez vous, partout et ailleurs'
+  const textMobile = 'Chez vous, partout et ailleurs'
+
   return (
     <main className="home">
       <Banner
         imageSrc={ImgBanner}
-        text="Chez vous, partout et ailleurs"
+        ImgBannerMobile={ImgBannerMobile}
+        text={text}
+        textMobile={textMobile}
         backgroundOpacity={0.6}
       />
       <Gallery />

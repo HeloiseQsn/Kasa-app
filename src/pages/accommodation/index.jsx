@@ -13,7 +13,7 @@ function Accommodation() {
   const { id } = useParams() // Récupère l'ID de l'URL
   const navigate = useNavigate()
 
-  // Utilisez une expression régulière pour valider l'ID
+  // vérification de la validité de l'ID du logement
   const isValidId = /^[a-zA-Z0-9]+$/.test(id)
   const accommodation = useMemo(
     () => (isValidId ? data.find((item) => item.id === id) : null),

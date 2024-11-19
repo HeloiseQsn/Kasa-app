@@ -7,14 +7,18 @@ function Header() {
   return (
     <header>
       <picture>
-        <source srcSet={Logodesktop} media="(min-width: 601px)" sizes="422px" />
-        <source srcSet={Logomobile} media="(max-width: 600px)" sizes="146px" />
+        <source srcSet={Logodesktop} media="(min-width: 831px)" sizes="422px" />
+        <source srcSet={Logomobile} media="(max-width: 830px)" sizes="146px" />
         <img src={Logodesktop} alt="Logo rouge" />
       </picture>
       <nav>
         <ul>
-          <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/about">A propos</NavLink>
+          <li>
+            <NavLink to="/">Accueil</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">A propos</NavLink>
+          </li>
         </ul>
       </nav>
     </header>

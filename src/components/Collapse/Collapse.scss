@@ -63,11 +63,10 @@
     }
     ul {
       padding: 1rem;
-      list-style: none;
       li {
         font-size: $fontSize_collapseContent;
         font-weight: $fontWeight_fine;
-        list-style: none;
+
         @include breakpoint(small) {
           font-size: $fontSize_collapseContentMobile;
         }
