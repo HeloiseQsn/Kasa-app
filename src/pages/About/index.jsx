@@ -1,8 +1,8 @@
 import './about.scss'
 import '../../styles/main.scss'
-import Banner from '../../components/banner'
+import Banner from '../../components/Banner'
 import ImgBanner from '../../assets/img_banner_about_desktop.webp'
-import Collapse from '../../components/collapse'
+import Collapse from '../../components/Collapse'
 
 function About() {
   const textFiabilite =

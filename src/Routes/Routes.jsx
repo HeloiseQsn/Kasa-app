@@ -4,8 +4,8 @@ import Home from '../pages/home'
 import Accommodation from '../pages/accommodation'
 import About from '../pages/about'
 import Error from '../pages/error'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function RoutesKasa() {
   return (
